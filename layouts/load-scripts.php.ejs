@@ -1,0 +1,17 @@
+<?php
+  // WPFlow WARNING!
+  // This file was auto generated using WPFlow.
+  // It is recomended to not edit any content in this file,
+  // to preserve the hability to update content from Webflow.
+  // Read the documentation for more information.
+
+  function load_scripts(){
+    wp_enqueue_style( 'normalize', get_stylesheet_directory_uri() . '/css/normalize.wf.css' );
+    wp_enqueue_style( 'wf', get_stylesheet_directory_uri() . '/css/wf.css', array('normalize') );
+    wp_enqueue_style( 'theme.wf', get_stylesheet_directory_uri() . '/css/theme.wf.css', array('wf'), '1.0' );
+    wp_enqueue_style( 'theme.or', get_stylesheet_directory_uri() . '/css/override.css', array('theme.wf') );
+    wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/js/modernizr.wf.js' );
+    wp_enqueue_script( 'wf', get_stylesheet_directory_uri() . '/js/wf.js', array('jquery'), '1.0', true );
+  }
+  add_action( 'wp_enqueue_scripts', 'load_scripts' );
+?>

@@ -1,0 +1,29 @@
+<?php
+  // WPFlow WARNING!
+  // This file was auto generated using WPFlow.
+  // It is recomended to not edit any content in this file,
+  // to preserve the hability to update content from Webflow.
+  // Read the documentation for more information.
+?>
+
+<?php get_template_part( 'helpers/images' ); ?>
+<?php get_template_part( 'helpers/files' ); ?>
+<?php get_template_part( 'helpers/links' ); ?>
+<?php get_template_part( 'helpers/loops' ); ?>
+<?php get_template_part( 'helpers/fields' ); ?>
+
+<!DOCTYPE html>
+<html data-wf-page="<%= wfPageCode %>" data-wf-site="<%= wfSiteCode %>" <?php language_attributes(); ?>>
+<head>
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <%- metaTags %>
+  <title><?php echo wp_title( '|', true, 'right' ); ?></title>
+  <link href="<?php echoLocalImage('favicon.png') ?>" rel="shortcut icon" type="image/x-icon">
+  <link href="<?php echoLocalImage('webclip.png') ?>" rel="apple-touch-icon">
+  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+  <?php wp_head(); ?>
+  <%- headScripts %>
+</head>
+
+<body <?php body_class(); ?>>
+  <%- navbar %>
